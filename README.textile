@@ -1,24 +1,23 @@
 Suggested usage:
 
-Download and install "appswitch":http://sabi.net/nriley/software/#appswitch.
-
 "Download":http://github.com/nriley/keyboardViewer/downloads and install keyboardViewer:
 
-pre. sudo install keyboardViewer /usr/local/bin
+bc. sudo install keyboardViewer /usr/local/bin
 
 Trigger with an AppleScript or shell script, e.g.:
 
-pre. do shell script "/usr/local/bin/appswitch -qi com.apple.KeyboardViewer || /usr/local/bin/keyboardViewer"
+bc. tell application "System Events"
+	if exists (process "Keyboard Viewer") then
+		click process "Keyboard Viewer"'s window 1's buttons whose subrole is "AXCloseButton"
+	else
+		do shell script "/usr/local/bin/keyboardViewer"
+	end if
+end tell
 
 The above will show Keyboard Viewer if it’s not running, and close it
 if it isn’t.
 
-(Note: Keyboard Viewer may reappear when you switch applications.  I
-haven't figured out how to fix this; no combination of
-TISSelectInputSource / TISDeselectInputSource and quitting
-KeyboardViewer seems to do it.)
-
 I run the above script from "FastScripts":http://www.red-sweater.com/fastscripts/.
 
-This isn’t necessary on Mac OS X 10.5 because simply opening
+The  isn’t necessary on Mac OS X 10.5 because simply opening
 KeyboardViewerServer does the same thing.
