@@ -1,0 +1,17 @@
+Suggested usage:
+
+Download and install "appswitch":http://sabi.net/nriley/software/#appswitch.
+
+"Download":http://github.com/nriley/keyboardViewer/downloads and install keyboardViewer:
+
+pre. sudo install keyboardViewer /usr/local/bin
+
+Trigger with an AppleScript or shell script, e.g.:
+
+pre. do shell script "/usr/local/bin/appswitch -qi com.apple.KeyboardViewer || /usr/local/bin/keyboardViewer"
+
+The above will show Keyboard Viewer if it’s not running, and close it if it isn’t.
+
+I run the above script from "FastScripts":http://www.red-sweater.com/fastscripts/.
+
+This isn’t necessary on Mac OS X 10.5 because simply opening KeyboardViewerServer does the same thing.
