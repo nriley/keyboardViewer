@@ -14,10 +14,8 @@ bc. tell application "System Events"
 	end if
 end tell
 
-The above will show Keyboard Viewer if it’s not running, and close it
-if it isn’t.
+The above will show Keyboard Viewer if it’s not running, and close it if it isn’t.
 
 I run the above script from "FastScripts":http://www.red-sweater.com/fastscripts/.
 
-The  isn’t necessary on Mac OS X 10.5 because simply opening
-KeyboardViewerServer does the same thing.
+The keyboardViewer utility isn’t necessary on Mac OS X 10.5 because simply opening KeyboardViewerServer does the same thing.
