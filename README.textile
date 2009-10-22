@@ -10,8 +10,15 @@ Trigger with an AppleScript or shell script, e.g.:
 
 pre. do shell script "/usr/local/bin/appswitch -qi com.apple.KeyboardViewer || /usr/local/bin/keyboardViewer"
 
-The above will show Keyboard Viewer if it’s not running, and close it if it isn’t.
+The above will show Keyboard Viewer if it’s not running, and close it
+if it isn’t.
+
+(Note: Keyboard Viewer may reappear when you switch applications.  I
+haven't figured out how to fix this; no combination of
+TISSelectInputSource / TISDeselectInputSource and quitting
+KeyboardViewer seems to do it.)
 
 I run the above script from "FastScripts":http://www.red-sweater.com/fastscripts/.
 
-This isn’t necessary on Mac OS X 10.5 because simply opening KeyboardViewerServer does the same thing.
+This isn’t necessary on Mac OS X 10.5 because simply opening
+KeyboardViewerServer does the same thing.
